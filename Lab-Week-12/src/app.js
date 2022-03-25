@@ -36,5 +36,12 @@ function gradecalc(num,studentsScholarship){
         studentsScholarship.push({"name": num.name, "gradeAvg": gradeavg})
 }   return gradeavg
 }
-
 console.log(loop(students))
+
+//part 4
+function darkmode(){
+    let element = document.querySelector("body > div")
+    element.classList.replace('light-theme','dark-theme')
+}
+darkmode()
+
