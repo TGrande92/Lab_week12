@@ -4,3 +4,37 @@ function part_two(select_element){
     return select_element
 }
 console.log(part_two())
+
+
+
+//part 3
+const students = [
+    { name: "Tasha", grades: [ 80, 67, 75, 62 ] },
+    { name: "Tuvok", grades: [ 90, 88, 91, 92 ] },
+    { name: "Dax", grades: [ 88, 90, 89, 85 ] },
+    { name: "Neelix", grades: [ 60, 54, 48, 50 ] }
+  ]
+
+
+
+function loop(students){
+    const studentsScholarship = []
+    for (let num of students) {
+        gradecalc(num,studentsScholarship)
+    }
+    return studentsScholarship
+}     
+
+
+function gradecalc(num,studentsScholarship){
+    let gradeavg = 0
+    for (let grade of num.grades){
+        gradeavg += grade
+    }
+    gradeavg = gradeavg / num.grades.length
+    if ( gradeavg > 80 ) {
+        studentsScholarship.push({"name": num.name, "gradeAvg": gradeavg})
+}   return gradeavg
+}
+
+console.log(loop(students))
