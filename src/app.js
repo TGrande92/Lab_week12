@@ -1,5 +1,5 @@
 //part 2
-function part_two(select_element){
+function part_two(select_element) {
     select_element = document.querySelector("div")
     return select_element
 }
@@ -7,7 +7,7 @@ console.log(part_two())
 
 
 
-//part 3
+// //part 3
 const students = [
     { name: "Tasha", grades: [ 80, 67, 75, 62 ] },
     { name: "Tuvok", grades: [ 90, 88, 91, 92 ] },
@@ -17,7 +17,7 @@ const students = [
 
 
 
-function loop(students){
+function findstudents(students){
     const studentsScholarship = []
     for (let num of students) {
         gradecalc(num,studentsScholarship)
@@ -36,13 +36,14 @@ function gradecalc(num,studentsScholarship){
         studentsScholarship.push({"name": num.name, "gradeAvg": gradeavg})
 }   return gradeavg
 }
-console.log(loop(students))
+function logdict(students){
+    console.log(findstudents(students))
+}
+logdict(students)
 
 //part 4
-function darkmode(){
-    let element = document.querySelector("body > div")
-    element.classList.replace('light-theme','dark-theme')
+function darkmode() {
+    let element = document.querySelector(".light-theme")
+    element.classList.replace('light-theme', 'dark-theme')
 }
 darkmode()
-
-document.querySelector("body > div")
